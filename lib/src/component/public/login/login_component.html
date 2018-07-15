@@ -1,0 +1,25 @@
+<form class="form-signin" #heroForm="ngForm" style="padding-top: 70px">
+    <img class="mb-4" src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+    <material-input label="Email"
+                    type="email"
+                    autoFocus
+                    floatingLabel
+                    class="form-control"
+                    [(ngModel)]="user.mailUser">
+    </material-input>
+    <br/>
+    <material-input label="Contraseña"
+                    type="password"
+                    floatingLabel
+                    class="form-control"
+                    [(ngModel)]="user.pwd">
+    </material-input>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Recuerdame
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" (click)="login()" type="submit">Iniciar</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+</form>

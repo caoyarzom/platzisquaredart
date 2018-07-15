@@ -1,0 +1,33 @@
+name: platzisquaredart
+description: A web app that uses AngularDart Components
+# version: 1.0.0
+# homepage: https://www.example.com
+# author: tinguinito <email@example.com>
+
+environment:
+  sdk: '>=2.0.0-dev.64.1 <2.0.0'
+
+dependencies:
+  angular: ^5.0.0-beta
+  angular_components: ^0.9.0-beta
+  angular_forms: ^2.0.0-beta
+  angular_router: ^2.0.0-alpha
+  firebase: ^4.5.1
+  bootstrap: ^4.0.0
+  google_maps: ">=3.0.0 <4.0.0"
+  json_serializable: "^0.5.7"
+  json_annotation: "^0.2.8"
+  bootstrap_sass: any
+
+dev_dependencies:
+  angular_test: ^2.0.0-alpha
+  build_runner: ^0.9.1
+  build_test: ^0.10.2
+  build_web_compilers: ^0.4.0+4
+  test: ^0.12.38
+  sass_builder: ^2.0.0
+
+transformers:
+- bootstrap:
+    url: //maxcdn.bootstrapcdn.com/bootstrap/{{version}}
+    version: 4.0.0

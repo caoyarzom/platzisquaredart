@@ -1,0 +1,39 @@
+<div class="well" style="padding-top: 70px">
+    <a [routerLink]="routes.lugares.toUrl()">Lugares</a> / Contacto
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <material-input label="Nombre"
+                            type="text"
+                            autoFocus
+                            floatingLabel
+                            class="form-control"
+                            [(ngModel)]="user.nombre">
+            </material-input>
+            <br/>
+
+            <material-input label="Mail"
+                            type="mail"
+                            autoFocus
+                            floatingLabel
+                            class="form-control"
+                            [(ngModel)]="user.mailUser">
+            </material-input>
+            <br/>
+
+            <material-input label="Mensaje"
+                            multiline="true"
+                            rows="10"
+                            type="text"
+                            floatingLabel
+                            class="form-control"
+                            [(ngModel)]="mensaje">
+            </material-input>
+            <hr/>
+        </div>
+    </div>
+    <a class="btn btn-primary">Enviar</a>
+    <a class="btn btn-default" [routerLink]="routes.lugares.toUrl()">Cancelar</a>
+</div>

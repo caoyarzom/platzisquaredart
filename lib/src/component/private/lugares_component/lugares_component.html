@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div id="map-canvas" #mapCanvas></div>
+    <div class="container" *ngIf="lugaresList.isNotEmpty">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Lugares Cercanos</h2>
+                <a class="btn btn-primary" [routerLink]="routes.crear.toUrl()">Crear Nuevo Negocio</a>
+                <ul class="list-group">
+                    <template ngFor let-lugar [ngForOf]="lugaresList">
+
+                        <li class="list-group-item">
+                           <!-- <a routerLink="/crear/{{lugar.id}}"><h3>{{lugar.nombre}}</h3></a>-->
+                            <a ><h3>{{lugar.nombreLugar}}</h3></a>
+                            <br />
+                            <small>Creado: {{lugar.lugaresId | date:'mediumTime' | uppercase}}</small>
+                            <p [innerHtml]="lugar.descripcion"></p>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+            <!--<div class="col-md-4" [@contenedorAnimable]="state">-->
+            <div class="col-md-4">
+                <h2>Destacados</h2>
+                <ng-container *ngFor="let lugar of lugaresList">
+                    <div class="bg-warning padding" *ngIf="lugar.plan == 'pagado'">
+                  <!--      <a routerLink="/crear/{{lugar.id}}"><h3>{{lugar.nombre}}</h3></a>-->
+                        <a ><h3>{{lugar.nombreLugar}}</h3></a>
+                     <!--   <p [innerHtml]="lugar.descripcion | linkifystr"></p>-->
+                        <p [innerHtml]="lugar.descripcion"></p>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
