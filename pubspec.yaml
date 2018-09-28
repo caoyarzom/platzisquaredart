@@ -5,7 +5,7 @@ description: A web app that uses AngularDart Components
 # author: tinguinito <email@example.com>
 
 environment:
-  sdk: '>=2.0.0-dev.64.1 <2.0.0'
+  sdk: '>=2.0.0-dev.69.5 <2.0.0'
 
 dependencies:
   angular: ^5.0.0-beta
@@ -27,7 +27,7 @@ dev_dependencies:
   test: ^0.12.38
   sass_builder: ^2.0.0
 
-transformers:
-- bootstrap:
-    url: //maxcdn.bootstrapcdn.com/bootstrap/{{version}}
-    version: 4.0.0
+#transformers:
+#- bootstrap:
+#    url: //maxcdn.bootstrapcdn.com/bootstrap/{{version}}
+#    version: 4.0.0

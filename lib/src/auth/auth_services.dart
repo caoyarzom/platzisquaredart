@@ -22,6 +22,9 @@ class AuthServices {
   }
 
   void registerFireBase(String email, String pwd) {
+    this.auth.signInAnonymously().then((res){
+      res.toJson();
+    });
     this.auth.createUserWithEmailAndPassword(email, pwd).then((response) async {
       print("Usuario resgistado ${response.toJson()}");
       await router.navigate("/login");

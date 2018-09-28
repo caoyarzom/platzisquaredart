@@ -36,6 +36,11 @@ class LugaresServices {
         .ref("lugares")
         .push(lugares.toJson());
   }
+  Future delete(Lugares lugares) async {
+    return db.app
+        .database()
+        .ref("lugares");
+  }
 
   Future obtenerGeoData(direccion) async {
     ///http://maps.google.com/maps/api/geocode/json?address=9-55+calle+72,+Bogota,Colombia
